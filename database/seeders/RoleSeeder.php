@@ -13,14 +13,15 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        Role::create(['name' => 'system_admin']);
-        Role::create(['name' => 'senior_pastor']);
-        Role::create(['name' => 'head_of_ministries']);
-        Role::create(['name' => 'pastor']);
-        Role::create(['name' => 'director']);
-        Role::create(['name' => 'hods']);
-        Role::create(['name' => 'worker']);
-        Role::create(['name' => 'member']);
-        Role::create(['name' => 'user']);
+        // Role::create(['name' => 'system_admin']);
+        // Role::create(['name' => 'senior_pastor']);
+        // Role::create(['name' => 'head_of_ministries']);
+        // Role::create(['name' => 'pastor']);
+        // Role::create(['name' => 'director']);
+        // Role::create(['name' => 'hods']);
+        // Role::create(['name' => 'worker']);
+        // Role::create(['name' => 'member']);
+        // Role::create(['name' => 'user']);
+        Role::create(['name' => 'branch_pastor']);
     }
 }
