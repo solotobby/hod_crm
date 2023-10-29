@@ -13,15 +13,22 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        // Role::create(['name' => 'system_admin']);
-        // Role::create(['name' => 'senior_pastor']);
-        // Role::create(['name' => 'head_of_ministries']);
-        // Role::create(['name' => 'pastor']);
-        // Role::create(['name' => 'director']);
-        // Role::create(['name' => 'hods']);
-        // Role::create(['name' => 'worker']);
-        // Role::create(['name' => 'member']);
-        // Role::create(['name' => 'user']);
-        Role::create(['name' => 'branch_pastor']);
+        $roles = [
+            ['name' => 'system_admin', 'guard_name' => 'web'],
+            ['name' => 'senior_pastor', 'guard_name' => 'web'],
+            ['name' => 'head_of_ministries', 'guard_name' => 'web'],
+            ['name' => 'pastor', 'guard_name' => 'web'],
+            ['name' => 'director', 'guard_name' => 'web'],
+            ['name' => 'hod', 'guard_name' => 'web'],
+            ['name' => 'worker', 'guard_name' => 'web'],
+            ['name' => 'member', 'guard_name' => 'web'],
+            ['name' => 'user', 'guard_name' => 'web'],
+            ['name' => 'branch_pastor', 'guard_name' => 'web'],
+        ];
+
+        foreach($roles as $role)
+        {
+            Role::updateOrCreate($role);
+        }
     }
 }

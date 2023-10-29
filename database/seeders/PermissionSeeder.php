@@ -50,8 +50,55 @@ class PermissionSeeder extends Seeder
         // Permission::create(['name' => 'can_edit_user']);
         // Permission::create(['name' => 'can_remove_user']);
 
-        Permission::create(['name' => 'can_create_branch']);
-        Permission::create(['name' => 'can_edit_branch']);
+        // Permission::create(['name' => 'can_create_branch']);
+        // Permission::create(['name' => 'can_edit_branch']);
+
+        $permissions = [
+            ['name' => 'can_create_branch', 'guard_name' => 'web'],
+            ['name' => 'can_edit_branch', 'guard_name' => 'web'],
+
+            ['name' => 'can_create_group', 'guard_name' => 'web'],
+            ['name' => 'can_edit_group', 'guard_name' => 'web'],
+            ['name' => 'can_delete_group', 'guard_name' => 'web'],
+            ['name' => 'can_send_notification', 'guard_name' => 'web'],
+
+            ['name' => 'can_create_senior_pastor', 'guard_name' => 'web'],
+            ['name' => 'can_edit_senior_pastor', 'guard_name' => 'web'],
+            ['name' => 'can_remove_senior_pastor', 'guard_name' => 'web'],
+
+
+            ['name' => 'can_create_head_of_ministries', 'guard_name' => 'web'],
+            ['name' => 'can_edit_head_of_ministries', 'guard_name' => 'web'],
+            ['name' => 'can_remove_head_of_ministries', 'guard_name' => 'web'],
+
+            ['name' => 'can_create_pastor', 'guard_name' => 'web'],
+            ['name' => 'can_edit_pastor', 'guard_name' => 'web'],
+            ['name' => 'can_remove_pastor', 'guard_name' => 'web'],
+
+            ['name' => 'can_create_director', 'guard_name' => 'web'],
+            ['name' => 'can_edit_director', 'guard_name' => 'web'],
+            ['name' => 'can_remove_director', 'guard_name' => 'web'],
+
+            ['name' => 'can_create_hod', 'guard_name' => 'web'],
+            ['name' => 'can_edit_hod', 'guard_name' => 'web'],
+            ['name' => 'can_remove_hod', 'guard_name' => 'web'],
+
+            ['name' => 'can_create_worker', 'guard_name' => 'web'],
+            ['name' => 'can_edit_worker', 'guard_name' => 'web'],
+            ['name' => 'can_remove_worker', 'guard_name' => 'web'],
+
+            ['name' => 'can_create_member', 'guard_name' => 'web'],
+            ['name' => 'can_edit_member', 'guard_name' => 'web'],
+            ['name' => 'can_remove_member', 'guard_name' => 'web'],
+
+            ['name' => 'can_create_user', 'guard_name' => 'web'],
+            ['name' => 'can_edit_user', 'guard_name' => 'web'],
+            ['name' => 'can_remove_user', 'guard_name' => 'web']
+        ];
+
+        foreach($permissions as $permision){
+            Permission::updateOrCreate($permision);
+        }
 
     }
 }
