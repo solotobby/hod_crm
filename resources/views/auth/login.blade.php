@@ -1,73 +1,152 @@
-@extends('layouts.app')
+@extends('layouts.auth')
+
+@section('title', 'Household of David CRM - Login')
+
+@section('css')
+    
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <div class="card overflow-hidden">
+        <div class="bg-primary">
+            <div class="text-primary text-center p-4">
+                <h5 class="text-white font-size-20">Login</h5>
+                {{-- <p class="text-white-50">Get your free Veltrix account now.</p> --}}
+                <a href="#" class="logo logo-admin">
+                    <img src="{{ url('assets/images/logo-sm.png') }}" height="24" alt="logo">
+                </a>
             </div>
         </div>
+
+        <div class="card-body p-4">
+            <div class="p-3">
+                {{-- <form class="mt-4" action="{{ route('register') }}" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label class="form-label">First Name<span class="red">*</span></label>
+                        <input type="text" name="first_name" class="form-control @error('first_name') is-invalid @enderror" placeholder="Your first name" value="{{ old('first_name') }}">
+                        @if ($errors->has('first_name'))
+                            <small class="text-danger">{{ $errors->first('first_name') }}</small>
+                        @endif
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Last Name<span class="red">*</span></label>
+                        <input type="text" name="last_name" class="form-control @error('last_name') is-invalid @enderror" placeholder="Your last name" value="{{ old('last_name') }}">
+                        @if ($errors->has('last_name'))
+                            <small class="text-danger">{{ $errors->first('last_name') }}</small>
+                        @endif
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email<span class="red">*</span></label>
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Enter email" value="{{ old('email') }}">
+                        @if ($errors->has('email'))
+                            <small class="text-danger">{{ $errors->first('email') }}</small>
+                        @endif
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone Number<span class="red">*</span></label>
+                        <input type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" placeholder="Enter phone number" value="{{ old('phone_number') }}">
+                        @if ($errors->has('phone_number'))
+                            <small class="text-danger">{{ $errors->first('phone_number') }}</small>
+                        @endif
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Branch<span class="red">*</span></label>
+                        <select name="branch" class="form-control @error('branch') is-invalid @enderror">
+                            <option value="" selected>Choose your branch</option>
+                            @foreach ($branches as $branch)
+                                <option value="{{ $branch->id }}">{{ $branch->name }}</option>
+                            @endforeach
+                        </select>
+                        @if ($errors->has('branch'))
+                            <small class="text-danger">{{ $errors->first('branch') }}</small>
+                        @endif
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Gender<span class="red">*</span></label>
+                        <select name="gender" class="form-control @error('gender') is-invalid @enderror">
+                            <option value="" selected>Choose your gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        @if ($errors->has('gender'))
+                            <small class="text-danger">{{ $errors->first('gender') }}</small>
+                        @endif
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Enter password">
+                        @if ($errors->has('password'))
+                            <small class="text-danger">{{ $errors->first('password') }}</small>
+                        @endif
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm password">
+                    </div>
+
+                    <div class="mb-3 row">
+                        <div class="col-12 text-end">
+                            <button class="btn btn-primary w-md waves-effect waves-light col-md-12" type="submit">Register</button>
+                        </div>
+                    </div>
+
+                </form> --}}
+
+                <form class="mt-4" action="{{ route('login') }}" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" name="email" placeholder="Enter email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="userpassword">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter password">
+                    </div>
+
+                    <div class="mb-3 row">
+                        <div class="col-sm-6">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="customControlInline">
+                                <label class="form-check-label" for="customControlInline">Remember me</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <div class="col-sm-12">
+                                <button class="btn btn-primary w-md waves-effect waves-light col-md-12" type="submit">Log In</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 mb-0 row">
+                        <div class="col-12 mt-4">
+                            <a href="#"><i class="mdi mdi-lock"></i> Forgot your password?</a>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
     </div>
-</div>
+
+    <div class="mt-5 text-center">
+        <p><a href="{{ route('register') }}" class="fw-medium text-primary"> Signup </a> </p>
+        <p>© <?= date('Y') ?> Household of David</p>
+    </div>
+    @section('js')
+        
+    @endsection
 @endsection
