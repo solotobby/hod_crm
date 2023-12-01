@@ -49,6 +49,11 @@ class User extends Authenticatable
     ];
 
     public function profile(){
-        return $this->hasOne(User::class);
+        return $this->hasOne(Profile::class);
+    }
+
+    public function branch()
+    {
+        return $this->belongsTo(Branch::class);
     }
 }
