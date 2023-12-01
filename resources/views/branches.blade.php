@@ -566,26 +566,7 @@
                         <div class="page-title-box">
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    @php
-                                        // $role_name = $role->name;
-                                        $role = '';
-                                        $split = explode('_', $name);
-                                        $num = count($split);
-                                        if ($num === 1) {
-                                            $role = ucfirst($name);
-                                        } else {
-                                            $i = 0;
-                                            foreach ($split as $val) {
-                                                $role .= ucfirst($val);
-                                                $i++;
-                                                if ($i < $num) {
-                                                    $role .= ' ';
-                                                }
-                                            }
-                                        }
-                                        
-                                    @endphp
-                                    <h6 class="page-title">{{ $role }} ({{ count($roles) }})</h6>
+                                    <h6 class="page-title">All Branches</h6>
                                     {{-- <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item active">Welcome to Veltrix Dashboard</li>
                                     </ol> --}}
@@ -621,33 +602,21 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Name</th>
-                                                <th>Branch</th>
-                                                <th>Email</th>
-                                                <th>Phone Number</th>
-                                                <th>Gender</th>
-                                                <th>Age Bracket</th>
-                                                <th>Address</th>
-                                                <th>City</th>
-                                                <th>Country</th>
+                                                <th>Action</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @forelse ($users as $user)
+                                            @forelse ($branches as $branch)
                                                 <tr>
                                                     <td>{{ $loop->index+1 }}</td>
-                                                    <td>{{ $user->first_name }} {{ $user->last_name }}</td>
-                                                    <td>{{ $user->branch->name }}</td>
-                                                    <td>{{ $user->email }}</td>
-                                                    <td>{{ $user->phone_number }}</td>
-                                                    <td>{{ $user->gender }}</td>
-                                                    <td>{{ $user->profile->age_bracket }}</td>
-                                                    <td>{{ $user->profile->address }}</td>
-                                                    <td>{{ $user->profile->city }}</td>
-                                                    <td>{{ $user->profile->country }}</td>
+                                                    <td>{{ $branch->name }}</td>
+                                                    <td>
+                                                        <a href="{{ route('user.branches', ['id' => $id]) }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
+                                                    </td>
                                                 </tr>
                                             @empty
                                                 <tr>
-                                                    <td colspan="10">No record found</td>
+                                                    <td colspan="3">No record found</td>
                                                 </tr>
                                             @endforelse
                                             </tbody>

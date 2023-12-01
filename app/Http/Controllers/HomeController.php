@@ -38,9 +38,9 @@ class HomeController extends Controller
     public function getUserByRoles($name)
     {
         if (Auth::user()->hasRole('system_admin')) {
-            $users = User::with('profile')->role($name)->get();
+            $users = User::with(['profile', 'branch'])->role($name)->get();
             $roles = Role::all();
-            return view('list-users', compact('users', 'roles'));
+            return view('list-users', compact('users', 'roles', 'name'));
         }
         dd('access denied');
     }
@@ -59,7 +59,7 @@ class HomeController extends Controller
     public function getUserByBranches($id)
     {
         if (Auth::user()->hasRole('system_admin')) {
-            $users = User::with('profile')->where('branch_id', $id)->get();
+            $users = User::with(['profile', 'branch'])->where('branch_id', $id)->get();
             $roles = Role::all();
             //yet to create the view
             return view('users-branch', compact('users', 'roles'));

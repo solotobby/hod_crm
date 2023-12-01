@@ -566,26 +566,7 @@
                         <div class="page-title-box">
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    @php
-                                        // $role_name = $role->name;
-                                        $role = '';
-                                        $split = explode('_', $name);
-                                        $num = count($split);
-                                        if ($num === 1) {
-                                            $role = ucfirst($name);
-                                        } else {
-                                            $i = 0;
-                                            foreach ($split as $val) {
-                                                $role .= ucfirst($val);
-                                                $i++;
-                                                if ($i < $num) {
-                                                    $role .= ' ';
-                                                }
-                                            }
-                                        }
-                                        
-                                    @endphp
-                                    <h6 class="page-title">{{ $role }} ({{ count($roles) }})</h6>
+                                    <h6 class="page-title">{{ count($users) }}</h6>
                                     {{-- <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item active">Welcome to Veltrix Dashboard</li>
                                     </ol> --}}
@@ -632,7 +613,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @forelse ($users as $user)
+                                            @forelse ($branches as $user)
                                                 <tr>
                                                     <td>{{ $loop->index+1 }}</td>
                                                     <td>{{ $user->first_name }} {{ $user->last_name }}</td>
