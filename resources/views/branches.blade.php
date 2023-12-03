@@ -9,16 +9,16 @@
         <meta content="HOD CRM" name="description">
         <meta content="HOD" name="author">
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ url('assets/images/favicon.ico') }}">
     
-        <link href="{{ asset('assets/libs/chartist/chartist.min.css') }}" rel="stylesheet">
+        <link href="{{ url('assets/libs/chartist/chartist.min.css') }}" rel="stylesheet">
     
         <!-- Bootstrap Css -->
-        <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css">
+        <link href="{{ url('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css">
         <!-- Icons Css -->
-        <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ url('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css">
         <!-- App Css-->
-        <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css">
+        <link href="{{ url('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css">
     
     </head>
 
@@ -35,19 +35,19 @@
                         <div class="navbar-brand-box">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
+                                    <img src="{{ url('assets/images/logo-sm.png') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="17">
+                                    <img src="{{ url('assets/images/logo-dark.png') }}" alt="" height="17">
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
+                                    <img src="{{ url('assets/images/logo-sm.png') }}" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="{{ asset('assets/images/logo-light.png') }}" alt="" height="18">
+                                    <img src="{{ url('assets/images/logo-light.png') }}" alt="" height="18">
                                 </span>
                             </a>
                         </div>
@@ -56,7 +56,7 @@
                             <i class="mdi mdi-menu"></i>
                         </button>
 
-                        <div class="d-none d-sm-block">
+                        {{-- <div class="d-none d-sm-block">
                             <div class="dropdown pt-3 d-inline-block">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Create <i class="mdi mdi-chevron-down"></i>
@@ -70,7 +70,7 @@
                                     <a class="dropdown-item" href="#">Separated link</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="d-flex">
@@ -82,7 +82,7 @@
                             </div>
                         </form>
 
-                        <div class="dropdown d-inline-block d-lg-none ms-2">
+                        {{-- <div class="dropdown d-inline-block d-lg-none ms-2">
                             <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-magnify"></i>
@@ -101,49 +101,49 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="dropdown d-none d-md-block ms-2">
+                        {{-- <div class="dropdown d-none d-md-block ms-2">
                             <button type="button" class="btn header-item waves-effect"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="me-2" src="{{ asset('assets/images/flags/us_flag.jpg') }}" alt="Header Language" height="16"> English <span class="mdi mdi-chevron-down"></span>
+                                <img class="me-2" src="{{ url('assets/images/flags/us_flag.jpg') }}" alt="Header Language" height="16"> English <span class="mdi mdi-chevron-down"></span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
                     
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{ asset('assets/images/flags/germany_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> German </span>
+                                    <img src="{{ url('assets/images/flags/germany_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> German </span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{ asset('assets/images/flags/italy_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Italian </span>
+                                    <img src="{{ url('assets/images/flags/italy_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Italian </span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{ asset('assets/images/flags/french_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> French </span>
+                                    <img src="{{ url('assets/images/flags/french_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> French </span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{ asset('assets/images/flags/spain_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Spanish </span>
+                                    <img src="{{ url('assets/images/flags/spain_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Spanish </span>
                                 </a>
 
                                  <!-- item-->
                                  <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="{{ asset('assets/images/flags/russia_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Russian </span>
+                                    <img src="{{ url('assets/images/flags/russia_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Russian </span>
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="dropdown d-none d-lg-inline-block">
+                        {{-- <div class="dropdown d-none d-lg-inline-block">
                             <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
                                 <i class="mdi mdi-fullscreen"></i>
                             </button>
-                        </div>
+                        </div> --}}
 
-                        <div class="dropdown d-inline-block">
+                        {{-- <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-bell-outline"></i>
@@ -256,12 +256,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="{{ asset('assets/images/users/user-4.jpg') }}"
+                                <img class="rounded-circle header-profile-user" src="{{ url('assets/images/users/user-4.jpg') }}"
                                     alt="Header Avatar">
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
@@ -278,11 +278,11 @@
                             </div>
                         </div>
 
-                        <div class="dropdown d-inline-block">
+                        {{-- <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
                                 <i class="mdi mdi-cog-outline"></i>
                             </button>
-                        </div>
+                        </div> --}}
             
                     </div>
                 </div>
@@ -300,7 +300,7 @@
                             <li class="menu-title">Main</li>
 
                             <li>
-                                <a href="#" class="waves-effect">
+                                <a href="{{ route('home') }}" class="waves-effect">
                                     <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">1</span>
                                     <span>Dashboard</span>
                                 </a>
@@ -342,6 +342,25 @@
                                     <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">1</span>
                                     <span>Branches</span>
                                 </a>
+                            </li>
+
+                            <li>
+                                <a href="calendar.html" class=" waves-effect">
+                                    <i class="ti-calendar"></i>
+                                    <span>Calendar</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ti-email"></i>
+                                    <span>Email</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="email-inbox.html">Inbox</a></li>
+                                    <li><a href="email-read.html">Email Read</a></li>
+                                    <li><a href="email-compose.html">Email Compose</a></li>
+                                </ul>
                             </li>
 
                             <li class="menu-title">Components</li>
@@ -566,7 +585,7 @@
                         <div class="page-title-box">
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <h6 class="page-title">All Branches</h6>
+                                    <h6 class="page-title">All Branches ({{ count($branches) }})</h6>
                                     {{-- <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item active">Welcome to Veltrix Dashboard</li>
                                     </ol> --}}
@@ -591,7 +610,6 @@
                         </div>
                         <!-- end page title -->
 
-
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
@@ -611,7 +629,7 @@
                                                     <td>{{ $loop->index+1 }}</td>
                                                     <td>{{ $branch->name }}</td>
                                                     <td>
-                                                        <a href="{{ route('user.branches', ['id' => $id]) }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
+                                                        <a href="{{ route('user.branches', ['id' => $branch->id]) }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
                                                     </td>
                                                 </tr>
                                             @empty
@@ -625,8 +643,7 @@
                                     </div>
                                 </div>
                             </div> <!-- end col -->
-                        </div> <!-- end row -->
-                        {{--  --}}
+                        </div>
                         
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
@@ -634,7 +651,7 @@
                                     <div class="card-body">
                                         <div class="mb-4">
                                             <div class="float-start mini-stat-img me-4">
-                                                <img src="{{ asset('assets/images/services-icon/01.png') }}" alt="">
+                                                <img src="{{ url('assets/images/services-icon/01.png') }}" alt="">
                                             </div>
                                             <h5 class="font-size-16 text-uppercase text-white-50">Orders</h5>
                                             <h4 class="fw-medium font-size-24">1,685 <i
@@ -658,7 +675,7 @@
                                     <div class="card-body">
                                         <div class="mb-4">
                                             <div class="float-start mini-stat-img me-4">
-                                                <img src="{{ asset('assets/images/services-icon/02.png') }}" alt="">
+                                                <img src="{{ url('assets/images/services-icon/02.png') }}" alt="">
                                             </div>
                                             <h5 class="font-size-16 text-uppercase text-white-50">Revenue</h5>
                                             <h4 class="fw-medium font-size-24">52,368 <i
@@ -682,7 +699,7 @@
                                     <div class="card-body">
                                         <div class="mb-4">
                                             <div class="float-start mini-stat-img me-4">
-                                                <img src="{{ asset('assets/images/services-icon/03.png') }}" alt="">
+                                                <img src="{{ url('assets/images/services-icon/03.png') }}" alt="">
                                             </div>
                                             <h5 class="font-size-16 text-uppercase text-white-50">Average Price</h5>
                                             <h4 class="fw-medium font-size-24">15.8 <i
@@ -706,7 +723,7 @@
                                     <div class="card-body">
                                         <div class="mb-4">
                                             <div class="float-start mini-stat-img me-4">
-                                                <img src="{{ asset('assets/images/services-icon/04.png') }}" alt="">
+                                                <img src="{{ url('assets/images/services-icon/04.png') }}" alt="">
                                             </div>
                                             <h5 class="font-size-16 text-uppercase text-white-50">Product Sold</h5>
                                             <h4 class="fw-medium font-size-24">2436 <i
@@ -767,10 +784,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- end row -->
                                     </div>
                                 </div>
-                                <!-- end card -->
                             </div>
 
                             <div class="col-xl-3">
@@ -972,7 +987,7 @@
                                                         <i class="mdi mdi-arrow-right fs-5"></i>
                                                     </a>
                                                 </div>
-                                                <h6 class="mb-0"><img src="{{ asset('assets/images/users/user-3.jpg') }}" alt=""
+                                                <h6 class="mb-0"><img src="{{ url('assets/images/users/user-3.jpg') }}" alt=""
                                                         class="avatar-sm rounded-circle me-2"> James Athey</h6>
                                             </div>
                                         </div>
@@ -1003,7 +1018,7 @@
                                                         <th scope="row">#14256</th>
                                                         <td>
                                                             <div>
-                                                                <img src="{{ asset('assets/images/users/user-2.jpg') }}" alt=""
+                                                                <img src="{{ url('assets/images/users/user-2.jpg') }}" alt=""
                                                                     class="avatar-xs rounded-circle me-2"> Philip Smead
                                                             </div>
                                                         </td>
@@ -1020,7 +1035,7 @@
                                                         <th scope="row">#14257</th>
                                                         <td>
                                                             <div>
-                                                                <img src="{{ asset('assets/images/users/user-3.jpg') }}" alt=""
+                                                                <img src="{{ url('assets/images/users/user-3.jpg') }}" alt=""
                                                                     class="avatar-xs rounded-circle me-2"> Brent Shipley
                                                             </div>
                                                         </td>
@@ -1037,7 +1052,7 @@
                                                         <th scope="row">#14258</th>
                                                         <td>
                                                             <div>
-                                                                <img src="{{ asset('assets/images/users/user-4.jpg') }}" alt=""
+                                                                <img src="{{ url('assets/images/users/user-4.jpg') }}" alt=""
                                                                     class="avatar-xs rounded-circle me-2"> Robert Sitton
                                                             </div>
                                                         </td>
@@ -1054,7 +1069,7 @@
                                                         <th scope="row">#14259</th>
                                                         <td>
                                                             <div>
-                                                                <img src="{{ asset('assets/images/users/user-5.jpg') }}" alt=""
+                                                                <img src="{{ url('assets/images/users/user-5.jpg') }}" alt=""
                                                                     class="avatar-xs rounded-circle me-2"> Alberto Jackson
                                                             </div>
                                                         </td>
@@ -1071,7 +1086,7 @@
                                                         <th scope="row">#14260</th>
                                                         <td>
                                                             <div>
-                                                                <img src="{{ asset('assets/images/users/user-6.jpg') }}" alt=""
+                                                                <img src="{{ url('assets/images/users/user-6.jpg') }}" alt=""
                                                                     class="avatar-xs rounded-circle me-2"> David Sanchez
                                                             </div>
                                                         </td>
@@ -1088,7 +1103,7 @@
                                                         <th scope="row">#14261</th>
                                                         <td>
                                                             <div>
-                                                                <img src="{{ asset('assets/images/users/user-2.jpg') }}" alt=""
+                                                                <img src="{{ url('assets/images/users/user-2.jpg') }}" alt=""
                                                                     class="avatar-xs rounded-circle me-2"> Philip Smead
                                                             </div>
                                                         </td>
@@ -1115,7 +1130,7 @@
                                             <ul class="conversation-list" data-simplebar style="max-height: 367px;">
                                                 <li class="clearfix">
                                                     <div class="chat-avatar">
-                                                        <img src="{{ asset('assets/images/users/user-2.jpg') }}"
+                                                        <img src="{{ url('assets/images/users/user-2.jpg') }}"
                                                             class="avatar-xs rounded-circle" alt="male">
                                                         <span class="time">10:00</span>
                                                     </div>
@@ -1130,7 +1145,7 @@
                                                 </li>
                                                 <li class="clearfix odd">
                                                     <div class="chat-avatar">
-                                                        <img src="{{ asset('assets/images/users/user-3.jpg') }}"
+                                                        <img src="{{ url('assets/images/users/user-3.jpg') }}"
                                                             class="avatar-xs rounded-circle" alt="Female">
                                                         <span class="time">10:01</span>
                                                     </div>
@@ -1145,7 +1160,7 @@
                                                 </li>
                                                 <li class="clearfix">
                                                     <div class="chat-avatar">
-                                                        <img src="{{ asset('assets/images/users/user-2.jpg') }}"
+                                                        <img src="{{ url('assets/images/users/user-2.jpg') }}"
                                                             class="avatar-xs rounded-circle" alt="male">
                                                         <span class="time">10:04</span>
                                                     </div>
@@ -1160,7 +1175,7 @@
                                                 </li>
                                                 <li class="clearfix odd">
                                                     <div class="chat-avatar">
-                                                        <img src="{{ asset('assets/images/users/user-3.jpg') }}"
+                                                        <img src="{{ url('assets/images/users/user-3.jpg') }}"
                                                             class="avatar-xs rounded-circle" alt="male">
                                                         <span class="time">10:05</span>
                                                     </div>
@@ -1175,7 +1190,7 @@
                                                 </li>
                                                 <li class="clearfix odd">
                                                     <div class="chat-avatar">
-                                                        <img src="{{ asset('assets/images/users/user-3.jpg') }}"
+                                                        <img src="{{ url('assets/images/users/user-3.jpg') }}"
                                                             class="avatar-xs rounded-circle" alt="male">
                                                         <span class="time">10:08</span>
                                                     </div>
@@ -1183,9 +1198,9 @@
                                                         <div class="ctext-wrap">
                                                             <span class="user-name mb-2">Smith</span>
 
-                                                            <img src="{{ asset('assets/images/small/img-1.jpg') }}" alt="" height="48"
+                                                            <img src="{{ url('assets/images/small/img-1.jpg') }}" alt="" height="48"
                                                                 class="rounded me-2">
-                                                            <img src="{{ asset('assets/images/small/img-2.jpg') }}" alt="" height="48"
+                                                            <img src="{{ url('assets/images/small/img-2.jpg') }}" alt="" height="48"
                                                                 class="rounded">
                                                         </div>
                                                     </div>
@@ -1234,7 +1249,7 @@
         <!-- END layout-wrapper -->
 
         <!-- Right Sidebar -->
-        <div class="right-bar">
+        {{-- <div class="right-bar">
             <div data-simplebar class="h-100">
                 <div class="rightbar-title px-3 py-4">
                     <a href="javascript:void(0);" class="right-bar-toggle float-end">
@@ -1242,14 +1257,12 @@
                     </a>
                     <h5 class="m-0">Settings</h5>
                 </div>
-
-                <!-- Settings -->
                 <hr class="mt-0" />
                 <h6 class="text-center">Choose Layouts</h6>
 
                 <div class="p-4">
                     <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-1.jpg') }}" class="img-fluid img-thumbnail" alt="">
+                        <img src="{{ url('assets/images/layouts/layout-1.jpg') }}" class="img-fluid img-thumbnail" alt="">
                     </div>
                     <div class="form-check form-switch mb-3">
                         <input type="checkbox" class="form-check-input theme-choice" id="light-mode-switch" checked />
@@ -1257,51 +1270,51 @@
                     </div>
     
                     <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-2.jpg') }}" class="img-fluid img-thumbnail" alt="">
+                        <img src="{{ url('assets/images/layouts/layout-2.jpg') }}" class="img-fluid img-thumbnail" alt="">
                     </div>
                     <div class="form-check form-switch mb-3">
-                        <input type="checkbox" class="form-check-input theme-choice" id="dark-mode-switch" data-bsStyle="{{ asset('assets/css/bootstrap-dark.min.css') }}" 
-                            data-appStyle="{{ asset('assets/css/app-dark.min.css') }}" />
+                        <input type="checkbox" class="form-check-input theme-choice" id="dark-mode-switch" data-bsStyle="{{ url('assets/css/bootstrap-dark.min.css') }}" 
+                            data-appStyle="{{ url('assets/css/app-dark.min.css') }}" />
                         <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
                     </div>
     
                     <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-3.jpg') }}" class="img-fluid img-thumbnail" alt="">
+                        <img src="{{ url('assets/images/layouts/layout-3.jpg') }}" class="img-fluid img-thumbnail" alt="">
                     </div>
                     <div class="form-check form-switch mb-5">
-                        <input type="checkbox" class="form-check-input theme-choice" id="rtl-mode-switch" data-appStyle="{{ asset('assets/css/app-rtl.min.css') }}" />
+                        <input type="checkbox" class="form-check-input theme-choice" id="rtl-mode-switch" data-appStyle="{{ url('assets/css/app-rtl.min.css') }}" />
                         <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
                     </div>
                     <div class="d-grid">
-                        <a href="https://1.envato.market/grNDB" class="btn btn-primary mt-3" target="_blank"><i class="mdi mdi-cart me-1"></i> Purchase Now</a>
+                        <a href="#" class="btn btn-primary mt-3" target="_blank"><i class="mdi mdi-cart me-1"></i> Purchase Now</a>
                     </div>
                 </div>
 
-            </div> <!-- end slimscroll-menu-->
-        </div>
+            </div>
+        </div> --}}
         <!-- /Right-bar -->
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
                 <!-- JAVASCRIPT -->
-                <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
-                <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-                <script src="{{ asset('assets/libs/metismenu/metisMenu.min.js') }}"></script>
-                <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
-                <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
+                <script src="{{ url('assets/libs/jquery/jquery.min.js') }}"></script>
+                <script src="{{ url('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+                <script src="{{ url('assets/libs/metismenu/metisMenu.min.js') }}"></script>
+                <script src="{{ url('assets/libs/simplebar/simplebar.min.js') }}"></script>
+                <script src="{{ url('assets/libs/node-waves/waves.min.js') }}"></script>
 
 
         <!-- Peity chart-->
-        <script src="{{ asset('assets/libs/peity/jquery.peity.min.js') }}"></script>
+        <script src="{{ url('assets/libs/peity/jquery.peity.min.js') }}"></script>
 
         <!-- Plugin Js-->
-        <script src="{{ asset('assets/libs/chartist/chartist.min.js') }}"></script>
-        <script src="{{ asset('assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js') }}"></script>
+        <script src="{{ url('assets/libs/chartist/chartist.min.js') }}"></script>
+        <script src="{{ url('assets/libs/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js') }}"></script>
 
-        <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
+        <script src="{{ url('assets/js/pages/dashboard.init.js') }}"></script>
 
-        <script src="{{ asset('assets/js/app.js') }}"></script>
+        <script src="{{ url('assets/js/app.js') }}"></script>
 
     </body>
 
