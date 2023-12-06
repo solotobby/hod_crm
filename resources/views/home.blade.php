@@ -56,7 +56,7 @@
                             <i class="mdi mdi-menu"></i>
                         </button>
 
-                        <div class="d-none d-sm-block">
+                        {{-- <div class="d-none d-sm-block">
                             <div class="dropdown pt-3 d-inline-block">
                                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Create <i class="mdi mdi-chevron-down"></i>
@@ -70,7 +70,7 @@
                                     <a class="dropdown-item" href="#">Separated link</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="d-flex">
@@ -82,7 +82,7 @@
                             </div>
                         </form>
 
-                        <div class="dropdown d-inline-block d-lg-none ms-2">
+                        {{-- <div class="dropdown d-inline-block d-lg-none ms-2">
                             <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-magnify"></i>
@@ -101,9 +101,9 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="dropdown d-none d-md-block ms-2">
+                        {{-- <div class="dropdown d-none d-md-block ms-2">
                             <button type="button" class="btn header-item waves-effect"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="me-2" src="{{ url('assets/images/flags/us_flag.jpg') }}" alt="Header Language" height="16"> English <span class="mdi mdi-chevron-down"></span>
@@ -135,15 +135,15 @@
                                     <img src="{{ url('assets/images/flags/russia_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Russian </span>
                                 </a>
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="dropdown d-none d-lg-inline-block">
+                        {{-- <div class="dropdown d-none d-lg-inline-block">
                             <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
                                 <i class="mdi mdi-fullscreen"></i>
                             </button>
-                        </div>
+                        </div> --}}
 
-                        <div class="dropdown d-inline-block">
+                        {{-- <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-bell-outline"></i>
@@ -256,7 +256,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
@@ -278,11 +278,11 @@
                             </div>
                         </div>
 
-                        <div class="dropdown d-inline-block">
+                        {{-- <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
                                 <i class="mdi mdi-cog-outline"></i>
                             </button>
-                        </div>
+                        </div> --}}
             
                     </div>
                 </div>
@@ -300,7 +300,7 @@
                             <li class="menu-title">Main</li>
 
                             <li>
-                                <a href="#" class="waves-effect">
+                                <a href="{{ route('home') }}" class="waves-effect">
                                     <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end">1</span>
                                     <span>Dashboard</span>
                                 </a>
@@ -344,17 +344,24 @@
                                 </a>
                             </li>
 
-                            {{-- <li>
+                            <li>
+                                <a href="calendar.html" class=" waves-effect">
+                                    <i class="ti-calendar"></i>
+                                    <span>Calendar</span>
+                                </a>
+                            </li>
+
+                            <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ti-email"></i>
-                                    <span>Branch Management</span>
+                                    <span>Email</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    @foreach ($branches as $branch)
-                                        <li><a href="{{ route('user.branches', ['id' => $branch->id]) }}">{{ $branch->name }}</a></li>
-                                    @endforeach
+                                    <li><a href="email-inbox.html">Inbox</a></li>
+                                    <li><a href="email-read.html">Email Read</a></li>
+                                    <li><a href="email-compose.html">Email Compose</a></li>
                                 </ul>
-                            </li> --}}
+                            </li>
 
                             <li class="menu-title">Components</li>
 
@@ -583,7 +590,7 @@
                                         <li class="breadcrumb-item active">Welcome to Veltrix Dashboard</li>
                                     </ol>
                                 </div>
-                                <div class="col-md-4">
+                                {{-- <div class="col-md-4">
                                     <div class="float-end d-none d-md-block">
                                         <div class="dropdown">
                                             <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -598,7 +605,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <!-- end page title -->
@@ -742,10 +749,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- end row -->
                                     </div>
                                 </div>
-                                <!-- end card -->
                             </div>
 
                             <div class="col-xl-3">
@@ -1209,7 +1214,7 @@
         <!-- END layout-wrapper -->
 
         <!-- Right Sidebar -->
-        <div class="right-bar">
+        {{-- <div class="right-bar">
             <div data-simplebar class="h-100">
                 <div class="rightbar-title px-3 py-4">
                     <a href="javascript:void(0);" class="right-bar-toggle float-end">
@@ -1217,8 +1222,6 @@
                     </a>
                     <h5 class="m-0">Settings</h5>
                 </div>
-
-                <!-- Settings -->
                 <hr class="mt-0" />
                 <h6 class="text-center">Choose Layouts</h6>
 
@@ -1248,12 +1251,12 @@
                         <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
                     </div>
                     <div class="d-grid">
-                        <a href="https://1.envato.market/grNDB" class="btn btn-primary mt-3" target="_blank"><i class="mdi mdi-cart me-1"></i> Purchase Now</a>
+                        <a href="#" class="btn btn-primary mt-3" target="_blank"><i class="mdi mdi-cart me-1"></i> Purchase Now</a>
                     </div>
                 </div>
 
-            </div> <!-- end slimscroll-menu-->
-        </div>
+            </div>
+        </div> --}}
         <!-- /Right-bar -->
 
         <!-- Right bar overlay-->

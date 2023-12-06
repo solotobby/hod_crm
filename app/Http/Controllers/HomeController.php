@@ -50,7 +50,6 @@ class HomeController extends Controller
         if (Auth::user()->hasRole('system_admin')) {
             $branches = Branch::all();
             $roles = Role::all();
-            //yet to create the view
             return view('branches', compact('branches', 'roles'));
         }
         dd('Access denied');
@@ -61,8 +60,8 @@ class HomeController extends Controller
         if (Auth::user()->hasRole('system_admin')) {
             $users = User::with(['profile', 'branch'])->where('branch_id', $id)->get();
             $roles = Role::all();
-            //yet to create the view
-            return view('users-branch', compact('users', 'roles'));
+            $branch_name = Branch::where('id', $id)->first()->name;
+            return view('users-branch', compact('users', 'roles', 'branch_name'));
         }
         dd('Access denied');
     }
