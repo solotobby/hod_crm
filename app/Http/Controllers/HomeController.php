@@ -30,9 +30,21 @@ class HomeController extends Controller
         if (Auth::user()->hasRole('system_admin')) {
             $branches = Branch::all();
             $roles = Role::all();
-            return view('home', compact('branches', 'roles'));
+
+            $usersCount = User::with('roles')->get()->filter(
+                fn ($user) => $user->roles->where('name', 'user')->toArray()
+            )->count();
+            $workersCount = User::with('roles')->get()->filter(
+                fn ($user) => $user->roles->where('name', 'worker')->toArray()
+            )->count();
+            $memberCount = User::with('roles')->get()->filter(
+                fn ($user) => $user->roles->where('name', 'member')->toArray()
+            )->count();
+            $users = User::all()->count();
+           
+            return view('home', compact('branches', 'roles', 'usersCount', 'workersCount', 'memberCount', 'users'));
         }
-        dd('user');
+       
     }
 
     public function getUserByRoles($name)
